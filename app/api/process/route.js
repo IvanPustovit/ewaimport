@@ -125,7 +125,7 @@ export async function POST(req) {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
-                            Authorization: `Bearer ${token}`,
+                            Authorization: `Bearer ${await getToken()}`,
                         },
                         body: JSON.stringify(data2),
                     })
